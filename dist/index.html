@@ -1,0 +1,817 @@
+<!--
+ Hello!
+ -
+ Simplefolio is a clean and responsive portfolio template for Developers!
+ Created by Jacobo Martinez.
+ -
+ Github Repo: https://github.com/cobiwave/simplefolio/
+ Readme: https://github.com/cobiwave/simplefolio/README.md
+ -
+ For business & inquires, contact me -> jacobojavier98@gmail.com
+--><!DOCTYPE html><html lang="en" class="sr"><head>
+   <meta charset="utf-8">
+   <meta http-equiv="X-UA-Compatible" content="IE=edge">
+   <meta name="viewport" content="width=device-width, initial-scale=1">
+   <link rel="shortcut icon" type="image/png" href="/favicon.2a2e97fc.png">
+
+   <!-- Todo: put here your site title -->
+   <title>Carlos Celaya Iturralde | AI Engineer</title>
+   <!-- Todo: add some coding keywords below - e.g: (javascript, yourusername, etc) -->
+   <meta name="keywords" content="Carlos Celaya, AI engineer, machine learning, biomedical engineering, immunogenicity, computer vision">
+   <!-- Todo: improve your SEO by adding a small description of you -->
+   <meta name="description" content="Carlos Celaya Iturralde - AI Engineer specializing in biomedical applications, machine learning, and computer vision systems">
+
+   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+   <link rel="stylesheet" href="/simplefolio.4a508c1d.css">
+   
+   <!-- Animaciones personalizadas -->
+   <style>.hero-title br + span {
+  font-size: .8em;
+}
+
+.cta-btn--resume {
+  color: #02aab0 !important;
+  background-color: #fff !important;
+  border: 2px solid #02aab0 !important;
+}
+
+.cta-btn--resume:hover {
+  text-decoration: none;
+  color: #fff !important;
+  background-color: #02aab0 !important;
+}
+
+.antibody-peptide-container {
+  cursor: pointer;
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  border-radius: 15px;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: 350px;
+  transition: transform .3s, box-shadow .3s;
+  display: flex;
+  position: relative;
+  overflow: hidden;
+  box-shadow: 0 10px 30px #0000004d;
+}
+
+.antibody-peptide-container:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 15px 40px #0006;
+}
+
+.antibody-animation {
+  filter: drop-shadow(0 0 15px #667eeacc);
+  z-index: 5;
+  width: 120px;
+  height: 120px;
+  animation: 8s ease-in-out infinite antibodyBinding;
+  position: absolute;
+  top: 50%;
+  left: -150px;
+  transform: translateY(-50%);
+}
+
+.peptide-animation {
+  filter: drop-shadow(0 0 15px #764ba2cc);
+  z-index: 5;
+  width: 80px;
+  height: 80px;
+  animation: 8s ease-in-out infinite peptideBinding;
+  position: absolute;
+  top: 50%;
+  right: -100px;
+  transform: translateY(-50%);
+}
+
+.energy-wave {
+  pointer-events: none;
+  opacity: 0;
+  border: 3px solid #ffff00e6;
+  border-radius: 50%;
+  animation: 8s ease-out infinite energyExpand;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.energy-wave-2 {
+  pointer-events: none;
+  opacity: 0;
+  border: 2px solid #ffff64b3;
+  border-radius: 50%;
+  animation: 8s ease-out .3s infinite energyExpand2;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+@keyframes antibodyBinding {
+  0% {
+    left: -150px;
+    transform: translateY(-50%)rotate(0)scale(1);
+  }
+
+  35% {
+    left: 20%;
+    transform: translateY(-50%)rotate(-3deg)scale(1.02);
+  }
+
+  45% {
+    left: 32%;
+    transform: translateY(-50%)rotate(-2deg)scale(1.05);
+  }
+
+  50% {
+    left: 35%;
+    transform: translateY(-50%)rotate(0)scale(1.08);
+  }
+
+  51%, 52%, 53%, 54%, 55%, 56%, 57%, 58%, 59%, 60%, 61%, 62%, 63%, 64%, 65% {
+    left: 35%;
+    transform: translateY(-50%)rotate(0)scale(1.08);
+  }
+
+  75% {
+    left: 25%;
+    transform: translateY(-50%)rotate(-2deg)scale(1.02);
+  }
+
+  100% {
+    left: -150px;
+    transform: translateY(-50%)rotate(0)scale(1);
+  }
+}
+
+@keyframes peptideBinding {
+  0% {
+    right: -100px;
+    transform: translateY(-50%)rotate(0)scale(1);
+  }
+
+  35% {
+    right: 25%;
+    transform: translateY(-50%)rotate(5deg)scale(1.02);
+  }
+
+  45% {
+    right: 32%;
+    transform: translateY(-50%)rotate(2deg)scale(1.05);
+  }
+
+  50% {
+    right: 35%;
+    transform: translateY(-50%)rotate(0)scale(1.08);
+  }
+
+  51%, 52%, 53%, 54%, 55%, 56%, 57%, 58%, 59%, 60%, 61%, 62%, 63%, 64%, 65% {
+    right: 35%;
+    transform: translateY(-50%)rotate(0)scale(1.08);
+  }
+
+  75% {
+    right: 25%;
+    transform: translateY(-50%)rotate(3deg)scale(1.02);
+  }
+
+  100% {
+    right: -100px;
+    transform: translateY(-50%)rotate(0)scale(1);
+  }
+}
+
+@keyframes energyExpand {
+  0%, 49% {
+    opacity: 0;
+    border-width: 0;
+    width: 0;
+    height: 0;
+  }
+
+  50% {
+    opacity: 1;
+    border-width: 4px;
+    width: 20px;
+    height: 20px;
+  }
+
+  52% {
+    opacity: .95;
+    border-width: 3px;
+    width: 60px;
+    height: 60px;
+  }
+
+  55% {
+    opacity: .8;
+    border-width: 3px;
+    width: 120px;
+    height: 120px;
+  }
+
+  60% {
+    opacity: .6;
+    border-width: 2px;
+    width: 220px;
+    height: 220px;
+  }
+
+  65% {
+    opacity: .4;
+    border-width: 1px;
+    width: 320px;
+    height: 320px;
+  }
+
+  66% {
+    opacity: .1;
+    border-width: 1px;
+    width: 350px;
+    height: 350px;
+  }
+
+  70%, 100% {
+    opacity: 0;
+    border-width: 1px;
+    width: 350px;
+    height: 350px;
+  }
+}
+
+@keyframes energyExpand2 {
+  0%, 51% {
+    opacity: 0;
+    border-width: 0;
+    width: 0;
+    height: 0;
+  }
+
+  52% {
+    opacity: .8;
+    border-width: 2px;
+    width: 15px;
+    height: 15px;
+  }
+
+  55% {
+    opacity: .7;
+    border-width: 2px;
+    width: 80px;
+    height: 80px;
+  }
+
+  60% {
+    opacity: .5;
+    border-width: 2px;
+    width: 180px;
+    height: 180px;
+  }
+
+  65% {
+    opacity: .3;
+    border-width: 1px;
+    width: 280px;
+    height: 280px;
+  }
+
+  66% {
+    opacity: .1;
+    border-width: 1px;
+    width: 300px;
+    height: 300px;
+  }
+
+  70%, 100% {
+    opacity: 0;
+    border-width: 1px;
+    width: 300px;
+    height: 300px;
+  }
+}
+
+.glasses-container {
+  cursor: pointer;
+  background: linear-gradient(135deg, #2c3e50 0%, #3498db 100%);
+  border-radius: 15px;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: 350px;
+  transition: transform .3s, box-shadow .3s;
+  display: flex;
+  position: relative;
+  overflow: hidden;
+  box-shadow: 0 10px 30px #0000004d;
+}
+
+.glasses-container:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 15px 40px #0006;
+}
+
+.glasses-animation {
+  z-index: 10;
+  filter: drop-shadow(0 0 25px #3498dbe6);
+  width: 200px;
+  height: 120px;
+  animation: 3s ease-in-out infinite glassesVibration;
+  position: relative;
+}
+
+.wave {
+  pointer-events: none;
+  border: 2px solid #3498db99;
+  border-radius: 50%;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.wave-1 {
+  width: 150px;
+  height: 150px;
+  animation: 4s ease-out infinite waveExpand;
+}
+
+.wave-2 {
+  width: 150px;
+  height: 150px;
+  animation: 4s ease-out .8s infinite waveExpand;
+}
+
+.wave-3 {
+  width: 150px;
+  height: 150px;
+  animation: 4s ease-out 1.6s infinite waveExpand;
+}
+
+.wave-4 {
+  width: 150px;
+  height: 150px;
+  animation: 4s ease-out 2.4s infinite waveExpand;
+}
+
+.ray {
+  transform-origin: center;
+  pointer-events: none;
+  background: linear-gradient(90deg, #0000, #3498dbcc, #0000);
+  border-radius: 2px;
+  animation: 3s ease-in-out infinite rayPulse;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+}
+
+.ray-1 {
+  width: 100px;
+  height: 3px;
+  animation-delay: 0s;
+  transform: translate(-50%, -50%)rotate(0);
+}
+
+.ray-2 {
+  width: 120px;
+  height: 2px;
+  animation-delay: .4s;
+  transform: translate(-50%, -50%)rotate(45deg);
+}
+
+.ray-3 {
+  width: 80px;
+  height: 3px;
+  animation-delay: .8s;
+  transform: translate(-50%, -50%)rotate(90deg);
+}
+
+.ray-4 {
+  width: 110px;
+  height: 2px;
+  animation-delay: 1.2s;
+  transform: translate(-50%, -50%)rotate(135deg);
+}
+
+.ray-5 {
+  width: 90px;
+  height: 3px;
+  animation-delay: 1.6s;
+  transform: translate(-50%, -50%)rotate(180deg);
+}
+
+.ray-6 {
+  width: 100px;
+  height: 2px;
+  animation-delay: .3s;
+  transform: translate(-50%, -50%)rotate(225deg);
+}
+
+.ray-7 {
+  width: 85px;
+  height: 3px;
+  animation-delay: 1.1s;
+  transform: translate(-50%, -50%)rotate(270deg);
+}
+
+.ray-8 {
+  width: 95px;
+  height: 2px;
+  animation-delay: 1.5s;
+  transform: translate(-50%, -50%)rotate(315deg);
+}
+
+@keyframes glassesVibration {
+  0%, 100% {
+    transform: translate(0)rotate(0)scale(1);
+  }
+
+  10% {
+    transform: translate(-3px, -2px)rotate(-.8deg)scale(1.02);
+  }
+
+  20% {
+    transform: translate(3px, 2px)rotate(.8deg)scale(.98);
+  }
+
+  30% {
+    transform: translate(-2px, 3px)rotate(-.5deg)scale(1.01);
+  }
+
+  40% {
+    transform: translate(2px, -3px)rotate(.5deg)scale(.99);
+  }
+
+  50% {
+    transform: translate(-3px, 2px)rotate(-.3deg)scale(1.02);
+  }
+
+  60% {
+    transform: translate(3px, -2px)rotate(.3deg)scale(.98);
+  }
+
+  70% {
+    transform: translate(-2px, -3px)rotate(-.6deg)scale(1.01);
+  }
+
+  80% {
+    transform: translate(2px, 3px)rotate(.6deg)scale(.99);
+  }
+
+  90% {
+    transform: translate(-3px, -2px)rotate(-.2deg)scale(1.01);
+  }
+}
+
+@keyframes waveExpand {
+  0% {
+    opacity: 0;
+    border-width: 3px;
+    width: 150px;
+    height: 150px;
+  }
+
+  25% {
+    opacity: .9;
+    border-width: 2px;
+  }
+
+  50% {
+    opacity: .7;
+    border-width: 2px;
+  }
+
+  100% {
+    opacity: 0;
+    border-width: 1px;
+    width: 450px;
+    height: 450px;
+  }
+}
+
+@keyframes rayPulse {
+  0%, 60%, 100% {
+    opacity: 0;
+    transform: translate(-50%, -50%)scale(.5);
+  }
+
+  30% {
+    opacity: 1;
+    transform: translate(-50%, -50%)scale(1.3);
+  }
+}
+
+.antibody-peptide-container:hover .antibody-animation, .antibody-peptide-container:hover .peptide-animation {
+  animation-duration: 4s;
+}
+
+.glasses-container:hover .glasses-animation {
+  animation-duration: 1.5s;
+}
+
+.glasses-container:hover .wave {
+  animation-duration: 2s;
+}
+
+.project-buttons {
+  flex-wrap: wrap;
+  gap: 15px;
+  margin-top: 20px;
+  display: flex;
+}
+
+.cta-btn {
+  text-align: center;
+  border: 2px solid #0000;
+  border-radius: 5px;
+  min-width: 140px;
+  padding: 12px 24px;
+  font-weight: bold;
+  text-decoration: none;
+  transition: all .3s;
+  display: inline-block;
+}
+
+.cta-btn--hero {
+  color: #fff;
+  background-color: #02aab0;
+  border-color: #02aab0;
+}
+
+.cta-btn--hero:hover {
+  color: #02aab0;
+  background-color: #0000;
+  border-color: #02aab0;
+  text-decoration: none;
+}
+
+.text-color-main {
+  color: #02aab0;
+  text-decoration: none;
+}
+
+.text-color-main:hover {
+  color: #028a92;
+  text-decoration: underline;
+}
+
+@media (width <= 768px) {
+  .antibody-animation {
+    width: 80px;
+    height: 80px;
+  }
+
+  .peptide-animation {
+    width: 60px;
+    height: 60px;
+  }
+
+  .glasses-animation {
+    width: 150px;
+    height: 90px;
+  }
+
+  .ray {
+    width: 60px !important;
+  }
+
+  .antibody-peptide-container, .glasses-container {
+    height: 250px;
+  }
+
+  .project-buttons {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .cta-btn {
+    width: 100%;
+    max-width: 250px;
+  }
+}
+</style>
+
+   <script defer="" src="https://unpkg.com/scrollreveal@4.0.0/dist/scrollreveal.min.js"></script>
+
+   <!-- Todo: remove the below script once you finish your portfolio -->
+   <script async="" defer="" src="https://buttons.github.io/buttons.js"></script>
+ </head>
+
+ <!-- Todo: read the following HTML Todos to create your stunning portfolio website -->
+ <body>
+   <div id="top"></div>
+
+   <!-- **** Hero Section **** -->
+   <section id="hero" class="jumbotron">
+     <div class="container">
+       <h1 class="hero-title load-hidden">
+         Hi, my name is <span class="text-color-main">Carlos Celaya Iturralde</span>
+         <br>
+         <span>I'm an engineer with specialisation in AI systems.</span>
+       </h1>
+       <p class="hero-cta load-hidden">
+         <a rel="noreferrer" class="cta-btn cta-btn--hero" href="#about">Know more</a>
+       </p>
+     </div>
+   </section>
+   <!-- /END Hero Section -->
+
+   <!-- **** About Section **** -->
+   <section id="about">
+     <div class="container">
+       <h2 class="section-title load-hidden">About me</h2>
+       <div class="row about-wrapper">
+         <div class="col-md-6 col-sm-12">
+           <div class="about-wrapper__image load-hidden">
+             <img alt="Profile Image" class="img-fluid rounded shadow-lg" height="auto" width="300px" src="/profile.6ee28169.jpg">
+           </div>
+         </div>
+         <div class="col-md-6 col-sm-12">
+           <div class="about-wrapper__info load-hidden">
+             <p class="about-wrapper__info-text">
+               I have just finished my studies on biomedical engineering and
+               right now I am starting a Master's degree on deep learning for audio video and signal processing
+             </p>
+             <p class="about-wrapper__info-text">
+               One of my biggest passions right now is AI and I love getting into Kaggle and trying to solve competitions.
+               Recently I have been studying the ARC-AGI problem.
+               That is why I would love to start a job in an AI company so here you can see some projects related to the field where I learnt a lot. 
+               I hope you like it.
+             </p>
+             <span class="d-flex mt-3">
+               <a rel="noreferrer" target="_blank" class="cta-btn cta-btn--resume" href="/assets/resume.pdf">
+                 View Resume
+               </a>
+             </span>
+           </div>
+         </div>
+       </div>
+     </div>
+   </section>
+   <!-- /END About Section -->
+
+   <!-- **** Projects Section **** -->
+   <section id="projects">
+     <div class="container">
+       <div class="project-wrapper">
+         <h2 class="section-title dark-blue-text">Projects</h2>
+
+         <!-- PROYECTO 1: Bachelor's thesis - CON ANIMACIÓN ANTICUERPO + PÉPTIDO CON BINDING COORDINADO -->
+         <div class="row">
+           <div class="col-lg-4 col-sm-12">
+             <div class="project-wrapper__text load-hidden">
+               <h3 class="project-wrapper__text-title">Bachelor's thesis: Optimization of AI algorithms to predict immunogenicity</h3>
+               <div>
+                 <p class="mb-4">
+                   This work explores computational methods to improve the prediction of immunogenicity in tumor-specific neoantigens for 
+                   cancer immunotherapy. 
+                   It uses the biological structure of neoantigens to produce 
+                   features that predict each part of the immunogenic response in cells. 
+                   By enhancing the previous state of the art 
+                   models with advanced ML and deep learning techniques, the study achieves better predictive accuracy
+                   and identifies high-confidence neoantigens. 
+                 </p>
+               </div>
+               <div class="project-buttons">
+                 <a class="cta-btn cta-btn--hero" href="/assets/Thesis.pdf" target="_blank">
+                   View More
+                 </a>
+               </div>
+             </div>
+           </div>
+           <div class="col-lg-8 col-sm-12">
+             <div class="project-wrapper__image load-hidden">
+               <div class="antibody-peptide-container" onclick="window.open('assets/Thesis.pdf', '_blank')">
+                 <!-- Anticuerpo (tu imagen del anticuerpo) -->
+                 <img src="/antibody.8179502f.png" alt="Antibody" class="antibody-animation">
+                 <!-- Péptido (tu imagen del péptido) -->
+                 <img src="/peptide.95c8906c.png" alt="Peptide" class="peptide-animation">
+                 <!-- Ondas de energía coordinadas -->
+                 <div class="energy-wave"></div>
+                 <div class="energy-wave-2"></div>
+               </div>
+             </div>
+           </div>
+         </div>
+         <!-- /END Project 1 -->
+
+         <!-- PROYECTO 2: Aid Vision Pro - CON ANIMACIÓN GAFAS + ONDAS -->
+         <div class="row">
+           <div class="col-lg-4 col-sm-12">
+             <div class="project-wrapper__text load-hidden">
+               <h3 class="project-wrapper__text-title">Aid Vision Pro</h3>
+               <div>
+                 <p class="mb-4">
+                   This project focuses on the design and development of AidVision Pro, a pair of smart glasses created to assist people with partial or total visual impairment in navigating their surroundings more safely and independently. The prototype combines hardware and software solutions to detect nearby obstacles and to recognize and classify people, cars, and other moving elements to deliver audio alerts to the user. The glasses are lightweight, ergonomic, and rechargeable, with customizable vibration and sound patterns, and include an emergency support system that allows caregivers to access video and provide real-time assistance.
+                 </p>
+               </div>
+               <div class="project-buttons">
+                 <a class="cta-btn cta-btn--hero" href="/assets/CDR.pdf" target="_blank">
+                   View More
+                 </a>
+               </div>
+             </div>
+           </div>
+           <div class="col-lg-8 col-sm-12">
+             <div class="project-wrapper__image load-hidden">
+               <div class="glasses-container" onclick="window.open('assets/CDR.pdf', '_blank')">
+                 <!-- Ondas concéntricas -->
+                 <div class="wave wave-1"></div>
+                 <div class="wave wave-2"></div>
+                 <div class="wave wave-3"></div>
+                 <div class="wave wave-4"></div>
+                 
+                 <!-- Rayos direccionales -->
+                 <div class="ray ray-1"></div>
+                 <div class="ray ray-2"></div>
+                 <div class="ray ray-3"></div>
+                 <div class="ray ray-4"></div>
+                 <div class="ray ray-5"></div>
+                 <div class="ray ray-6"></div>
+                 <div class="ray ray-7"></div>
+                 <div class="ray ray-8"></div>
+                 
+                 <!-- Gafas con vibración (tu imagen de las gafas) -->
+                 <img src="/glasses.edbb81e0.png" alt="Aid Vision Pro Glasses" class="glasses-animation">
+               </div>
+             </div>
+           </div>
+         </div>
+         <!-- /END Project 2 -->
+       </div>
+     </div>
+   </section>
+   <!-- /END Projects Section -->
+
+   <!-- **** Contact Section **** -->
+   <section id="contact">
+     <div class="container">
+       <h2 class="section-title">Contact</h2>
+       <div class="contact-wrapper load-hidden">
+         <p class="contact-wrapper__text">Let's connect and discuss AI opportunities!</p>
+         <a rel="noreferrer" target="_blank" class="cta-btn cta-btn--resume" href="mailto:c.celayaiturralde@gmail.com">Get In Touch</a>
+       </div>
+     </div>
+   </section>
+   <!-- /END Contact Section -->
+
+   <!-- **** Footer Section **** -->
+   <footer class="footer navbar-static-bottom">
+     <div class="container">
+       <a rel="noreferrer" href="#top" class="back-to-top">
+         <i class="fa fa-angle-up fa-2x" aria-hidden="true"></i>
+       </a>
+       <div class="social-links">
+         <a rel="noreferrer" href="mailto:c.celayaiturralde@gmail.com" target="_blank">
+           <i class="fa fa-envelope fa-inverse"></i>
+         </a>
+         <a rel="noreferrer" href="tel:+34625282491" target="_blank">
+           <i class="fa fa-phone fa-inverse"></i>
+         </a>
+         <a rel="noreferrer" href="https://www.linkedin.com/in/carlos-celaya" target="_blank">
+           <i class="fa fa-linkedin fa-inverse"></i>
+         </a>
+       </div>
+
+       <hr>
+
+       <!-- Notice: if you want to give me some credit, it will be huge for me! if not, put your data on it -->
+       <p class="footer__text">
+         © 2024 - Carlos Celaya Iturralde
+       </p>
+     </div>
+   </footer>
+   <!-- /END Footer Section -->
+
+   <script>// Función para abrir PDFs específicos para cada proyecto
+function openProjectPDF(projectName) {
+    const pdfPaths = {
+        'bachelor-thesis': 'assets/Thesis.pdf',
+        'aid-vision-pro': 'assets/CDR.pdf',
+        'additional-project': 'assets/additional-project.pdf'
+    };
+    const pdfPath = pdfPaths[projectName];
+    if (pdfPath) window.open(pdfPath, '_blank');
+    else {
+        console.log('PDF no encontrado para el proyecto:', projectName);
+        // Opcionalmente, puedes mostrar un mensaje al usuario
+        alert('PDF not available for this project yet.');
+    }
+}
+// ScrollReveal y otras funcionalidades del portfolio original
+if (typeof ScrollReveal !== 'undefined') {
+    const defaultProps = {
+        easing: 'cubic-bezier(0.5, 0, 0, 1)',
+        distance: '30px',
+        duration: 1000,
+        desktop: true,
+        mobile: true
+    };
+    ScrollReveal().reveal('.load-hidden', defaultProps);
+}
+
+</script>
+   <script defer="" type="module" src="/simplefolio.31b563d9.js"></script>
+ 
+</body></html>
